@@ -53,7 +53,7 @@ module.exports = {
     },
     proxy: {
       '/api': {
-        target: 'http://dev.app.oa.com/sdc',
+        target: 'http://dev.app.m2.com/m2',
         changeOrigin: true,
         pathRewrite: {
           '/api': ''
