@@ -1,0 +1,90 @@
+.font-size(@size:14px) {
+  font-size: @size;
+  [data-dpr="2"] { font-size: @size * 2; }
+  [data-dpr="3"] { font-size: @size * 3; }
+}
+.font-color(@color) {
+  color: @color;
+  [data-theme='skyblue'] & {
+    color: var(--color-text-skyblue);
+  }
+  [data-theme='grassgreen'] & {
+    color: var(--color-text-grassgreen);
+  }
+}
+.bd-color(@color) {
+  border-color: @color;
+  [data-theme='skyblue'] & {
+    border-color: var(--color-bg-lightblue);
+  }
+  [data-theme='grassgreen'] & {
+    border-color: var(--color-bg-lightgreen);
+  }
+}
+.bg-color(@color) {
+  background-color: @color;
+  [data-theme='skyblue'] & {
+    background-color: var(--color-bg-lightblue);
+  }
+  [data-theme='grassgreen'] & {
+    background-color: var(--color-bg-lightgreen);
+  }
+}
+.bg-colors(@color, @color2) {
+  background: linear-gradient(to right,@color,@color2);
+  [data-theme='skyblue'] & {
+    background: linear-gradient(to right,var(--color-bg-skyblue),var(--color-bg-lightblue));
+  }
+  [data-theme='grassgreen'] & {
+    background: linear-gradient(to right,var(--color-bg-grassgreen),var(--color-bg-lightgreen));
+  }
+}
+.ellipsis-line(@line:2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+.flex-center(@h:center, @v:center) {
+  display: flex;
+  justify-content: @h;
+  align-items: @v;
+}
+
+.fixed-center(@pos:fixed, @top:50%, @w:100%, @h:auto) {
+  position: @pos;
+  top: @top;
+  left: 50%;
+  width: @w;
+  height: @h;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-all(@pos:fixed) {
+  position: @pos;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-bg(@w, @h, @url, @size:contain) {
+  display: inline-block;
+  content: '';
+  width: @w;
+  height: @h;
+  background: url(@url) no-repeat center;
+  background-size: @size;
+}
+
+.divider(@top, @right, @h:10px, @w:1px, @border:solid) {
+  position: absolute;
+  content: '';
+  top: @top;
+  right: @right;
+  width: @w;
+  height: @h;
+  border-left: 1px @border var(--color-divider);
+}
