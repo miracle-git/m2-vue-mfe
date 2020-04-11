@@ -21,9 +21,24 @@
           {
             "id": "101",
             "text": "列表",
-            "url": "/app1/list",
             "parent": "1",
-            "level": 2
+            "level": 2,
+            "children": [
+              {
+                "id": "1011",
+                "text": "列表1",
+                "url": "/app1/list1",
+                "parent": "101",
+                "level": 3
+              },
+              {
+                "id": "1012",
+                "text": "列表2",
+                "url": "/app1/list2",
+                "parent": "101",
+                "level": 3
+              }
+            ]
           }
         ],
         "perm": "app1"
