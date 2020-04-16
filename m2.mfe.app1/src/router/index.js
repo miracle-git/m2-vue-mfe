@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import { base } from 'utils'
+import { base } from 'utils'
 
 Vue.use(VueRouter)
 
@@ -25,7 +25,6 @@ const routes = [
 
 export default new VueRouter({
   mode: 'history',
-  // base: window.__POWERED_BY_QIANKUN__ ? base : '/',
-  base: window.__POWERED_BY_QIANKUN__ ? '/app1' : '/',
+  base: window.__POWERED_BY_QIANKUN__ ? base : '/',
   routes
 })

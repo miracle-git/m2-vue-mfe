@@ -2,7 +2,7 @@
 import { pagers, checkAppEnv, filterApps } from 'm2-vue'
 import render from './render'
 import { http } from './utils/fetch'
-import { mfe } from './utils'
+import { mfe, conf } from './utils'
 import store from './store'
 
 // 首先检测环境配置
@@ -11,8 +11,10 @@ checkAppEnv(mfe)
 // 导入应用间通信介质
 const props = {
   data: store.getters,         // 从主应用仓库读出的数据
-  // components: LibraryUi,    // 从主应用读出的组件库
-  // utils: LibraryJs,         // 从主应用读出的工具类库
+  utils: {                     // 从主应用读出的工具类库
+    $http: http,
+    conf
+  },
   emits: {},                   // 从主应用下发emit函数来收集子应用反馈
   pagers                       // 从主应用下发应用间通信呼机
 }
