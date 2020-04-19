@@ -1,4 +1,4 @@
-import { get } from 'utils/fetch'
+import http from 'utils/http'
 import api from 'config/api.conf'
 
-export const getDictList = () => get(api.getDictList, { loading: true })
+export const getDictList = () => http.get(api.getDictList, { loading: true })
