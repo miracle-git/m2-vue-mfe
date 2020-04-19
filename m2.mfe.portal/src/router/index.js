@@ -1,8 +1,4 @@
-// import { getRouter } from 'm2-vue'
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { getRouter } from 'm2-vue'
 
 const routes = [
   {
@@ -11,7 +7,4 @@ const routes = [
   }
 ]
 
-export default new VueRouter({
-  mode: 'history',
-  routes
-})
+export default getRouter(routes)

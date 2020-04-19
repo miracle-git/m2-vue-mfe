@@ -1,5 +1,5 @@
 // 定义传入子应用的数据
-import { pagers, checkAppEnv, filterApps } from 'm2-vue'
+import { pagers, checkAppEnv, filterApps } from 'm2-mfe'
 import render from './render'
 import http from './utils/http'
 import { mfe, conf } from './utils'

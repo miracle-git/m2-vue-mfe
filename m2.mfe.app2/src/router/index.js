@@ -17,6 +17,6 @@ const routes = [
 
 export default new VueRouter({
   mode: 'history',
-  base: window.__POWERED_BY_QIANKUN__ ? base : '/',
+  base,
   routes
 })

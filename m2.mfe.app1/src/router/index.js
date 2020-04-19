@@ -23,8 +23,10 @@ const routes = [
   }
 ]
 
+console.log(base)
+
 export default new VueRouter({
   mode: 'history',
-  base: window.__POWERED_BY_QIANKUN__ ? base : '/',
+  base,
   routes
 })

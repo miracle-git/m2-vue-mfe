@@ -24,7 +24,8 @@
 <script>
   import { EVENT_BUS_KEYS } from 'config/app.conf'
   import { DataEvent } from 'm2-core'
-  import { refresh, getMenus } from 'm2-vue'
+  import { refresh } from 'm2-vue'
+  import { getMenus } from 'm2-mfe'
 
   export default {
     name: 'app',

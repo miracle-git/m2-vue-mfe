@@ -1,4 +1,4 @@
-import { registerApp, startApp, subscribe } from 'm2-vue'
+import { registerApp, startApp, subscribe } from 'm2-mfe'
 import renderApp from './render'
 import getApps from './apps'
 

@@ -1,5 +1,6 @@
 // 应用配置
-import { renderApp } from 'm2-vue'
+import { render } from 'm2-vue'
+import { renderApp } from 'm2-mfe'
 import App from './views/app'
 import router from './router'
 import store from './store'
@@ -8,7 +9,7 @@ import i18n from './locales/i18n'
 import plugins from './plugins'
 
 export default function({ appContent, loading } = {}) {
-  renderApp(App, {
+  renderApp(render, App, {
     el: '#container',
     router,
     store,
