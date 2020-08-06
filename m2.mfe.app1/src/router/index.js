@@ -23,8 +23,6 @@ const routes = [
   }
 ]
 
-console.log(base)
-
 export default new VueRouter({
   mode: 'history',
   base,
