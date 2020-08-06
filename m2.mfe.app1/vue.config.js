@@ -18,10 +18,7 @@ module.exports = {
         'plugins': '@/plugins',
         'services': '@/services',
         'utils': '@/utils',
-        'views': '@/views',
-        'sdc-core': 'm2-core',
-        'sdc-vue': 'm2-vue',
-        'sdc-ui': 'm2-ui'
+        'views': '@/views'
       }
     },
     output: {
